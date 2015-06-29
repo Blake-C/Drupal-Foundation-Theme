@@ -1,5 +1,7 @@
 <?php
 
+// .info options: https://www.drupal.org/node/171205
+
 /**
  * Add body classes if certain regions have content.
  */
