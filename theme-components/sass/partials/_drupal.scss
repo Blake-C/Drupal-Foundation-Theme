@@ -1,0 +1,17 @@
+#admin-menu {
+	box-shadow: none;
+	a, span{
+		font-size: 12px;
+	}
+	.dropdown{
+		li li.expandable {
+			background: rgb(69, 69, 74) url(/sites/all/modules/admin_menu/images/arrow.png) no-repeat 145px 9px;
+			ul{
+				margin: -28px 0 0 160px;
+			}
+		}
+		.admin-menu-toolbar-category > a.active-trail{
+			margin: 3px 0px 10px 5px;
+		}
+	}
+}
