@@ -1,0 +1,68 @@
+body{
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+@media #{$small-only} {
+	img{
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+/* Skip to content link (Accessibility) */
+#skip{
+	a{
+		position:absolute;
+		left:-10000px;
+		top:auto;
+		width:1px;
+		height:1px;
+		overflow:hidden;
+		&:focus{
+			position:static; 
+			width:auto; 
+			height:auto; 
+		}
+	}
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+
+	&:hover,
+	&:active,
+	&:focus {
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		display: block;
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar */
+	}
+}
+
+/* Foundation figure was coming out of the layout container */
+figure {
+	margin: 0;
+	width: 100% !important;
+	padding: 1em 20px;
+}
+
+/* Prevent main form element from wrapping the layout */
+form#form1{
+	margin: 0;
+	padding: 0;
+}
