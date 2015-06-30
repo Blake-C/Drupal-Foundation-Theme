@@ -46,6 +46,6 @@ function get_jquery_cdn( $cdnLocation, $localLocation ) {
   if ( get_http_response_code($cdnLocation ) == 200 ) {
     drupal_add_js($cdnLocation, array('type' => 'file', 'scope' => 'header', 'weight' => -25));
   } else {
-    drupal_add_js(path_to_theme() .'/js/jquery-min.js', array('type' => 'file', 'scope' => 'header', 'weight' => -25));
+    drupal_add_js(path_to_theme() . $localLocation, array('type' => 'file', 'scope' => 'header', 'weight' => -25));
   }
 }
