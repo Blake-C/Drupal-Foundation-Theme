@@ -4,7 +4,6 @@ package = Core
 version = VERSION
 core = 7.x
 stylesheets[all][] = css/styles.css
-scripts[] = js/global-scripts-min.js
 
 regions[header] = Header
 regions[highlighted] = Highlighted

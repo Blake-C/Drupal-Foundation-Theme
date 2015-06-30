@@ -5,24 +5,27 @@
 /**
  * Add body classes if certain regions have content.
  */
-function foundation_preprocess_html(&$variables) {
-  if (!empty($variables['page']['featured'])) {
-    $variables['classes_array'][] = 'featured';
+function drupal_foundation_theme_preprocess_html(&$variables) {
+  /* Add Scripts */
+  // https://api.drupal.org/api/drupal/includes%21common.inc/function/drupal_add_js/7
+
+  /* Register jQuery Utility Function */
+  get_jquery_cdn( 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js', '/js/jquery-min.js' );
+
+  /* IF IE 8 */
+  if( preg_match('/(?i)msie [1-8]/',$_SERVER['HTTP_USER_AGENT']) ) {
+    get_jquery_cdn( 'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js', '/js/jquery-1.11.2.min.js' );
+
+    /* Load the CSS that will get Foundation 5 columns to work in IE-8 */
+    drupal_add_css(path_to_theme() . '/css/ie8-grid-support.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 9', '!IE' => FALSE), 'preprocess' => FALSE));
+    drupal_add_js(path_to_theme() .'/js/rem-min.js', array('type' => 'file', 'scope' => 'footer'));
   }
 
-  if (!empty($variables['page']['triptych_first'])
-    || !empty($variables['page']['triptych_middle'])
-    || !empty($variables['page']['triptych_last'])) {
-    $variables['classes_array'][] = 'triptych';
-  }
-
-  if (!empty($variables['page']['footer_firstcolumn'])
-    || !empty($variables['page']['footer_secondcolumn'])
-    || !empty($variables['page']['footer_thirdcolumn'])
-    || !empty($variables['page']['footer_fourthcolumn'])) {
-    $variables['classes_array'][] = 'footer-columns';
-  }
-
-  // Add conditional stylesheets for IE
-  drupal_add_css(path_to_theme() . '/css/ie8-grid-support.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 9', '!IE' => FALSE), 'preprocess' => FALSE));
+  /* Load other scripts */
+  drupal_add_js(path_to_theme() .'/js/modernizr-min.js', array('type' => 'file', 'scope' => 'header'));
+  drupal_add_js(path_to_theme() .'/js/global-scripts-min.js', array('type' => 'file', 'scope' => 'footer'));
 }
+
+
+// Custom utility functions
+require path_to_theme() . '/inc/utility-functions.php';
