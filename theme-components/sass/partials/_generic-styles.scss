@@ -10,6 +10,19 @@ body{
 	}
 }
 
+/* Less than IE8 alert box */
+.chromeframe{
+	background-color: rgb(210, 0, 0);
+	width: 100%;
+	color: $white;
+	padding: 10px 0px;
+	text-indent: 20px;
+	a{
+		color: $white;
+		text-decoration: underline;
+	}
+}
+
 /* Skip to content link (Accessibility) */
 #skip{
 	a{

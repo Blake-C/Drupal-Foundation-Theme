@@ -17,12 +17,13 @@ function drupal_foundation_theme_preprocess_html(&$variables) {
 
     /* Load the CSS that will get Foundation 5 columns to work in IE-8 */
     drupal_add_css(path_to_theme() . '/css/ie8-grid-support.css', $type = 'file', $media = 'all', $preprocess = FALSE);
-    drupal_add_js(path_to_theme() .'/js/rem-min.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(path_to_theme() . '/js/rem-min.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(path_to_theme() . '/js/ie-scripts-min.js', array('type' => 'file', 'scope' => 'header'));
   }
 
   /* Load other scripts */
   get_js_cdn( 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js', '/js/modernizr-min.js', 'header' );
-  drupal_add_js(path_to_theme() .'/js/global-scripts-min.js', array('type' => 'file', 'scope' => 'footer'));
+  drupal_add_js(path_to_theme() . '/js/global-scripts-min.js', array('type' => 'file', 'scope' => 'footer'));
 }
 
 

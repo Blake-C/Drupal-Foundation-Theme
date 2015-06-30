@@ -11,10 +11,11 @@ function drupal_foundation_theme_js_alter(&$javascript) {
     path_to_theme() . '/js/modernizr-min.js',
     path_to_theme() . '/js/jquery-1.11.2.min.js',
     path_to_theme() . '/js/jquery-min.js',
+    path_to_theme() . '/js/ie-scripts-min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js',
     'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js'
+    'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js',
   );
 
   // Remove drupal scripts, added above to be below new jQuery
