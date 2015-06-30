@@ -6,6 +6,7 @@
  * @link http://koplowiczandsons.com/content/performance-making-js-sit-back-bus
  */
 function drupal_foundation_theme_js_alter(&$javascript) {
+  // Scripts to allow to load in the head
   $header_scripts = array(
     path_to_theme() . '/js/modernizr-min.js',
     path_to_theme() . '/js/jquery-1.11.2.min.js',
@@ -18,6 +19,8 @@ function drupal_foundation_theme_js_alter(&$javascript) {
   // Remove drupal scripts, added above to be below new jQuery
   unset($javascript ['misc/jquery.js']);
 
+  // Loop through scripts and set them to load in the footer
+  // unless they are in the excluded scripts array that are allowed to load in the head
   foreach ($javascript as $key => &$script) {
     if ($script['scope'] == 'header' && !in_array($script['data'], $header_scripts)) {
       $script['scope'] = 'footer';
