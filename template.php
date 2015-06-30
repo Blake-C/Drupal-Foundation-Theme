@@ -8,12 +8,12 @@
  */
 function drupal_foundation_theme_preprocess_html(&$variables) {
   /* Register jQuery - Utility Function */
-  get_jquery_cdn( 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js', '/js/jquery-min.js' );
+  get_js_cdn( 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js', '/js/jquery-min.js', 'header' );
 
   /* Add assets if IE 8 or lower */
   if( preg_match('/(?i)msie [1-8]/',$_SERVER['HTTP_USER_AGENT']) ) {
     /* Newer jQuery unset in drupal_foundation_theme_js_alter function */
-    get_jquery_cdn( 'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js', '/js/jquery-1.11.2.min.js' );
+    get_js_cdn( 'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js', '/js/jquery-1.11.2.min.js', 'header' );
 
     /* Load the CSS that will get Foundation 5 columns to work in IE-8 */
     drupal_add_css(path_to_theme() . '/css/ie8-grid-support.css', $type = 'file', $media = 'all', $preprocess = FALSE);
@@ -21,7 +21,7 @@ function drupal_foundation_theme_preprocess_html(&$variables) {
   }
 
   /* Load other scripts */
-  drupal_add_js(path_to_theme() .'/js/modernizr-min.js', array('type' => 'file', 'scope' => 'header'));
+  get_js_cdn( 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js', '/js/modernizr-min.js', 'header' );
   drupal_add_js(path_to_theme() .'/js/global-scripts-min.js', array('type' => 'file', 'scope' => 'footer'));
 }
 
