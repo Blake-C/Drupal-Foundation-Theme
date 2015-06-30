@@ -33,7 +33,7 @@ function drupal_foundation_theme_js_alter(&$javascript) {
     if ($script['scope'] == 'header' && !in_array($script['data'], $header_scripts)) {
       $script['scope'] = 'footer';
     }
-  } 
+  }
 }
 
 
