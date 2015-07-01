@@ -44,7 +44,7 @@ function drupal_foundation_theme_js_alter(&$javascript) {
  */
 function get_http_response_code( $theURL ) {
   $headers = get_headers( $theURL);
-  return substr( $headers[0], 9, 3 );
+  return substr( $headers[0], 9, 3 ); 
 }
 
 
