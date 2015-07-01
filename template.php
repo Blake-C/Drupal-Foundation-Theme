@@ -29,3 +29,6 @@ function drupal_foundation_theme_preprocess_html(&$variables) {
 
 // Custom utility functions
 require path_to_theme() . '/inc/utility-functions.php';
+
+// Custom theme breadcrumb
+require path_to_theme() . '/inc/breadcrumb.php';
