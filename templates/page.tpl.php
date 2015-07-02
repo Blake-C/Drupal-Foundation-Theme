@@ -60,7 +60,6 @@
  * - $page['highlighted']: Items for the highlighted content region.
  * - $page['content']: The main content of the current page.
  * - $page['sidebar_first']: Items for the first sidebar.
- * - $page['sidebar_second']: Items for the second sidebar.
  * - $page['header']: Items for the header region.
  * - $page['footer']: Items for the footer region.
  *
@@ -133,6 +132,16 @@
       
       <!-- Page Content -->
       <div id="main" class="row">
+      
+        <!-- First Sidebar -->
+        <?php if ($page['sidebar_first']): ?>
+          <div id="sidebar-first" class="medium-4 columns">
+            <section>
+              <?php print render($page['sidebar_first']); ?>
+            </section>
+          </div>
+        <?php endif; ?>
+
         <!-- Main Content -->
         <div id="content" class="medium-8 columns">
           <section>
@@ -168,26 +177,7 @@
             <?php print $feed_icons; ?>
           </section>
         </div>
-        
-        <!-- First Sidebar -->
-        <?php if ($page['sidebar_first']): ?>
-          <div id="sidebar-first" class="medium-4 columns">
-            <section>
-              <?php print render($page['sidebar_first']); ?>
-            </section>
-          </div>
-        <?php endif; ?>
-        
-        <!-- Second Sidebar -->
-        <?php if ($page['sidebar_second']): ?>
-          <div id="sidebar-second" class="medium-4 columns">
-            <section>
-              <?php print render($page['sidebar_second']); ?>
-            </section>
-          </div>
-        <?php endif; ?>
-      </div><!-- End #main -->
-    
+
       <!-- Footer -->
       <footer class="row">
         <div class="medium-12 columns">
