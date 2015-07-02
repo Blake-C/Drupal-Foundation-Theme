@@ -37,6 +37,7 @@
 			a {
 				color: #000;
 				background-color: #ededed;
+				border-bottom: 1px solid rgb(187, 187, 187);
 				height: 1.8em;
 				line-height: 1.9;
 				display: block;
@@ -53,6 +54,9 @@
 				-moz-border-radius-topright: 6px;
 				-webkit-border-top-right-radius: 6px;
 				border-top-right-radius: 6px;
+			}
+			&.active a {
+				background-color: #ffffff;
 			}
 		}
 	}
