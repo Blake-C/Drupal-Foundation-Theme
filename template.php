@@ -32,3 +32,6 @@ require path_to_theme() . '/inc/utility-functions.php';
 
 // Custom theme breadcrumb
 require path_to_theme() . '/inc/breadcrumb.php';
+
+// Custom theme Search Form
+require path_to_theme() . '/inc/search-form.php';
