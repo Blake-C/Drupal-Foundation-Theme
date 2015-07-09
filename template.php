@@ -28,10 +28,10 @@ function drupal_foundation_theme_preprocess_html(&$variables) {
 
 
 // Custom utility functions
-require path_to_theme() . '/inc/utility-functions.php';
+include_once path_to_theme() . '/inc/utility-functions.php';
 
 // Custom theme breadcrumb
-require path_to_theme() . '/inc/breadcrumb.php';
+include_once path_to_theme() . '/inc/breadcrumb.php';
 
 // Custom theme Search Form
-require path_to_theme() . '/inc/search-form.php';
+include_once path_to_theme() . '/inc/search-form.php';
