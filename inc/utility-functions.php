@@ -60,3 +60,22 @@ function get_js_cdn( $cdnLocation, $localLocation, $loadLocation ) {
     drupal_add_js(path_to_theme() . $localLocation, array('type' => 'file', 'scope' => $loadLocation, 'weight' => -25));
   }
 }
+
+/**
+ * Get substring between two strings PHP
+ *
+ * @link http://stackoverflow.com/questions/5696412/get-substring-between-two-strings-php
+ */
+function get_string_between( $string, $start, $end ){
+  $string = ''.$string;
+  $ini = strpos($string,$start);
+  
+  if ($ini == 0) {
+    return '';
+  }
+
+  $ini += strlen($start);
+  $len = strpos($string,$end,$ini) - $ini;
+
+  return substr($string,$ini,$len);
+}
