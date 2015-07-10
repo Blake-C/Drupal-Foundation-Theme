@@ -128,6 +128,15 @@
   </div>
 </div>
 
+<?php if ($page['banner_region'] && drupal_is_front_page()): ?>
+  <!-- Page Banner -->
+  <div class="banner-section">
+    <div class="home-banner">
+      <?php print render($page['banner_region']); ?>
+    </div>
+  </div>
+<?php endif; ?>
+
 <!-- Page Content -->
 <div id="main" class="row">
 

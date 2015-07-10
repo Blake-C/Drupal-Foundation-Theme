@@ -24,7 +24,8 @@
     "remodal": "~0.2.0",
     "selectivizr": "git://github.com/keithclark/selectivizr#ed2f5e3e56f059ad256cc921e24ecc0e1855f18a",
     "matchHeight": "~0.5.2",
-    "superfish": "~1.7.5"
+    "superfish": "~1.7.5",
+    "slick.js": "~1.5.5"
   },
   "resolutions": {
     "jquery": ">= 2.1.0"

@@ -1,0 +1,109 @@
+@import 
+	'../../../bower_components/slick.js/slick/slick.scss',
+	'../../../bower_components/slick.js/slick/slick-theme.scss';
+
+.banner-section {display:none;padding:0;}
+
+/* Slick Slider */
+.home-banner {
+	overflow: hidden;
+	h3 {
+		color: rgb(255, 255, 255);
+		margin: 10px;
+		text-shadow: 0px 3px 10px rgb(0, 0, 0);
+		font-size: 1.45em;
+		line-height: 1.2em;
+	}
+	.content-container {
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	.box {
+		max-width: 580px;
+		float: right;
+	}
+	.slick-slide{
+		min-height: 400px;
+		padding: 1% 0;
+
+		background-repeat: no-repeat;
+		background-position: top center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+}
+
+.slick-slider{
+	h1,
+	h2,
+	p {
+		text-align: left;
+		color: #FFF;
+		text-shadow: 0px 3px 10px #000;
+		margin: 10px;
+		padding: 0;
+		line-height:normal;
+	}
+
+	span.green {
+		color: rgb(190, 205, 43);
+	}
+
+	h1{font-size: 3.75em;}
+	h2 {font-size: 2.63em;}
+
+	p {  
+		background: rgba(39, 113, 165, 0.9);
+		padding: 10px 40px;
+		margin-bottom: 1%;
+		text-shadow: none;
+		border-radius: 5px;
+		font-size: 1.5em;
+		text-align: center;
+		display: inline-block;
+		font-weight: bold;
+		margin-top: 3%;
+	}
+}
+
+.slick-list {
+    .slick-loading & {
+        background: transparent;
+    }
+}
+
+@media only screen and (max-width: 759px) {
+	.slick-slider{
+		.box {
+			max-width: initial;
+			float: none;
+			padding: 0 60px;
+		}
+		h1 {
+			font-size: 2.2em;
+		}
+		h2 {
+			font-size: 1.7em;
+		}
+		p {
+			font-size: 1.2em;
+		}
+	}
+}
+
+@media only screen and (max-width: 440px) {
+	.slick-slider{
+		h1 {
+			font-size: 1.5em;
+		}
+		h2 {
+			font-size: 1em;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+}

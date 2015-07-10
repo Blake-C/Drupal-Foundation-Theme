@@ -24,6 +24,13 @@ function drupal_foundation_theme_preprocess_html(&$variables) {
   /* Load other scripts */
   get_js_cdn( 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js', '/js/modernizr-min.js', 'header' );
   drupal_add_js(path_to_theme() . '/js/global-scripts-min.js', array('type' => 'file', 'scope' => 'footer'));
+  
+  /* Homepage scripts */
+  // Example of loading on single page
+  // if(drupal_is_front_page()){  
+  //   drupal_add_css(path_to_theme() . '/css/slick-slider.css', $type = 'file', $media = 'all', $preprocess = FALSE);
+  //   drupal_add_js(path_to_theme() . '/js/slick_slider-min.js', array('type' => 'file', 'scope' => 'footer'));
+  // }
 }
 
 

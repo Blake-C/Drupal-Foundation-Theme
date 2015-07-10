@@ -6,6 +6,7 @@ core = 7.x
 stylesheets[all][] = css/styles.css
 
 regions[header] = Header
+regions[banner_region] = Banner Region
 regions[highlighted] = Highlighted
 regions[help] = Help
 regions[content] = Content
